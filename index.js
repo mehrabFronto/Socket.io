@@ -17,6 +17,10 @@ app.get('/', (req, res) => res.sendFile(join(__dirname, 'index.html')));
 
 //* 4. Define a connection event handler
 
+io.on('connection', (socket) => {
+  console.log('User connected to the server');
+});
+
 //* 5. Start the server
 
 const PORT = 3000;
